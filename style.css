@@ -316,18 +316,6 @@
 }
 
 /* ← ВОТ СЮДА вставляйте новые стили ↓ */
-.product-card__badge_hit {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  background: #FF4500;
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: 700;
-  padding: 4px 8px;
-  border-radius: 6px;
-  white-space: nowrap;
-}
 
 .product-price {
   display: flex;
