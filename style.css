@@ -306,6 +306,7 @@
 .product-card__price-new {
   font-size: 26px;
   font-weight: 900;
+  color: var(--text-main);
 }
 
 .product-card__price-old {
@@ -314,8 +315,27 @@
   text-decoration: line-through;
 }
 
-.product-card__btn {
-  width: 100%;
+/* ← ВОТ СЮДА вставляйте новые стили ↓ */
+
+.product-price {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 8px 0 12px;
+}
+
+.product-price__old {
+  color: #9ca3af;
+  font-size: 14px;
+  text-decoration: line-through;
+  line-height: 1.2;
+}
+
+.product-price__current {
+  color: #111827;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 /* ---------- Блок services ---------- */
