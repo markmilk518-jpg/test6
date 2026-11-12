@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мурмаркет — магазин кошачьих товаров и услуг</title>
+  <meta name="description" content="Товары и услуги для ваших котиков: корм, игрушки, груминг, ветклиника.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+
+  <!-- ================= ШАПКА ================= -->
+  <header class="header">
+    <div class="header__inner">
+      <a href="#" class="header__logo">
+        <span class="header__logo-icon">🐱</span>
+        <span class="header__logo-text">Мурмаркет</span>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#goods" class="nav__link">Товары</a>
+        <a href="#services" class="nav__link">Услуги</a>
+        <a href="#footer" class="nav__link">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= ОСНОВНОЕ СОДЕРЖИМОЕ ================= -->
+  <main class="main">
+
+    <!-- Промо-блок -->
+    <section class="hero">
+      <div class="hero__inner">
+        <h1 class="hero__title">Всё для счастья вашего кота</h1>
+        <p class="hero__text">
+          Корм, игрушки, лежанки и уход — с доставкой на дом за 2 часа.
+          Первая доставка бесплатно!
+        </p>
+        <div class="hero__actions">
+          <a href="#goods" class="button button_primary">Выбрать товары</a>
+          <a href="#services" class="button button_ghost">Наши услуги</a>
+        </div>
+        <p class="hero__note">🐾 Более 12 000 довольных мурлык по всей России</p>
+      </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="features">
+      <div class="features__grid">
+        <article class="feature-card">
+          <span class="feature-card__icon">🚚</span>
+          <h3 class="feature-card__title">Быстрая доставка</h3>
+          <p class="feature-card__text">Привезём заказ за 2 часа в пределах города.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-card__icon">🧪</span>
+          <h3 class="feature-card__title">Проверенный корм</h3>
+          <p class="feature-card__text">Только сертифицированные бренды с гарантией.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-card__icon">🩺</span>
+          <h3 class="feature-card__title">Свой ветеринар</h3>
+          <p class="feature-card__text">Консультация в чате — бесплатно круглосуточно.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Хиты продаж -->
+    <section class="catalog" id="goods">
+      <h2 class="catalog__title">Хиты продаж</h2>
+      <div class="catalog__grid">
+
+        <article class="product-card">
+          <span class="product-card__badge">Хит</span>
+          <div class="product-card__image-box">
+            <span class="product-card__emoji">🐟</span>
+          </div>
+          <span class="product-card__category">Корм</span>
+          <h3 class="product-card__title">Тунец премиум</h3>
+          <div class="product-card__pricing">
+            <span class="product-card__price-new">590 ₽</span>
+            <span class="product-card__price-old">790 ₽</span>
+          </div>
+          <button type="button" class="button button_primary product-card__btn">В корзину</button>
+        </article>
+
+        <article class="product-card">
+          <span class="product-card__badge">-30%</span>
+          <div class="product-card__image-box">
+            <span class="product-card__emoji">🧶</span>
+          </div>
+          <span class="product-card__category">Игрушки</span>
+          <h3 class="product-card__title">Дразнилка «Перо»</h3>
+          <div class="product-card__pricing">
+            <span class="product-card__price-new">249 ₽</span>
+            <span class="product-card__price-old">359 ₽</span>
+          </div>
+          <button type="button" class="button button_primary product-card__btn">В корзину</button>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__image-box">
+            <span class="product-card__emoji">🛏️</span>
+          </div>
+          <span class="product-card__category">Домики</span>
+          <h3 class="product-card__title">Лежанка «Облачко»</h3>
+          <div class="product-card__pricing">
+            <span class="product-card__price-new">1 490 ₽</span>
+          </div>
+          <button type="button" class="button button_primary product-card__btn">В корзину</button>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Услуги -->
+    <section class="services" id="services">
+      <h2 class="services__title">Услуги для питомцев</h2>
+      <div class="services__grid">
+        <article class="service-card">
+          <h3 class="service-card__title">Груминг</h3>
+          <p class="service-card__text">Стрижка, вычёсывание, стрижка когтей.</p>
+          <p class="service-card__price">от 1 200 ₽</p>
+        </article>
+        <article class="service-card">
+          <h3 class="service-card__title">Передержка</h3>
+          <p class="service-card__text">Забота о коте, пока вы в отъезде.</p>
+          <p class="service-card__price">от 700 ₽/сутки</p>
+        </article>
+        <article class="service-card">
+          <h3 class="service-card__title">Ветклиника</h3>
+          <p class="service-card__text">Осмотры, прививки, чипирование.</p>
+          <p class="service-card__price">от 900 ₽</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= ПОДВАЛ ================= -->
+  <footer class="footer" id="footer">
+    <div class="footer__inner">
+      <p class="footer__copy">© 2026 Мурмаркет — всё для котиков 🐈</p>
+      <nav class="footer__nav" aria-label="Навигация в подвале">
+        <a href="#" class="footer__link">Доставка и оплата</a>
+        <a href="#" class="footer__link">О компании</a>
+        <a href="tel:+78000000000" class="footer__link">8 (800) 000-00-00</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
