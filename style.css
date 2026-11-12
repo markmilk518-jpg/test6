@@ -340,12 +340,14 @@
 }
 
 .service-card {
+ .service-card {
   flex: 1 1 240px;
   padding: 24px;
-  background: var(--text-main);
+  background: #BC8F8F;   /* ← было var(--text-main), стало #BC8F8F */
   color: #ffffff;
   border-radius: var(--radius);
 }
+
 
 .service-card__title {
   margin: 0 0 8px;
@@ -364,8 +366,10 @@
   margin: 0;
   font-size: 16px;
   font-weight: 800;
-  color: var(--primary);
+  color: #ffffff;
 }
+
+
 
 /* ---------- Блок footer ---------- */
 
