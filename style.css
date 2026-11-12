@@ -1,0 +1,402 @@
+/* ==========================================================
+   Мурмаркет — стили промо-лендинга
+   Методология: БЭМ | Без !important | Flexbox + gap
+   ========================================================== */
+
+:root {
+  --primary: #10b981;
+  --primary-dark: #059669;
+  --accent: #ef4444;
+  --bg-page: #f1f5f9;
+  --bg-card: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-soft: #e2e8f0;
+  --radius: 20px;
+  --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- Основа страницы ---------- */
+
+.page {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  background: var(--bg-page);
+  color: var(--text-main);
+  /* чтобы не было горизонтального скролла */
+  overflow-x: hidden;
+}
+
+.page * {
+  box-sizing: border-box;
+}
+
+/* ---------- Общий блок-кнопка ---------- */
+
+.button {
+  display: inline-block;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.button_primary {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+.button_primary:hover {
+  background: var(--primary-dark);
+}
+
+.button_ghost {
+  background: transparent;
+  color: var(--primary-dark);
+  border: 2px solid var(--primary);
+}
+
+.button_ghost:hover {
+  background: rgba(16, 185, 129, 0.1);
+}
+
+/* ---------- Блок header ---------- */
+
+.header {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 20px;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.header__logo-icon {
+  font-size: 26px;
+}
+
+.header__logo-text {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+/* ---------- Элемент nav ---------- */
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.nav__link {
+  color: var(--text-muted);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  color: var(--primary-dark);
+}
+
+/* ---------- Блок hero ---------- */
+
+.hero {
+  padding: 60px 20px;
+  text-align: center;
+  background:
+    linear-gradient(rgba(241, 245, 249, 0.85), rgba(241, 245, 249, 0.85)),
+    url('https://img.magnific.com/premium-photo/cat-cartoon-images-background-copy-space_1179130-680510.jpg?semt=ais_hybrid&w=740')
+    center / cover no-repeat;
+}
+
+.hero__inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.hero__title {
+  margin: 0 0 16px;
+  font-size: clamp(28px, 6vw, 44px);
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.hero__text {
+  margin: 0 0 28px;
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.hero__note {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* ---------- Блок features ---------- */
+
+.features {
+  padding: 40px 20px;
+}
+
+.features__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  flex: 1 1 240px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+}
+
+.feature-card__icon {
+  display: block;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.feature-card__title {
+  margin: 0 0 8px;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.feature-card__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+/* ---------- Блок catalog ---------- */
+
+.catalog {
+  padding: 20px;
+}
+
+.catalog__title {
+  max-width: 1100px;
+  margin: 0 auto 24px;
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 900;
+}
+
+.catalog__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ---------- Блок product-card ---------- */
+
+.product-card {
+  position: relative;
+  flex: 1 1 260px;
+  max-width: 340px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.product-card__badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 4px 10px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  border-radius: 8px;
+}
+
+.product-card__image-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  margin-bottom: 20px;
+  background: var(--bg-page);
+  border-radius: 14px;
+}
+
+.product-card__emoji {
+  font-size: 72px;
+}
+
+.product-card__category {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.product-card__title {
+  margin: 6px 0 10px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.product-card__pricing {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.product-card__price-new {
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.product-card__price-old {
+  font-size: 16px;
+  color: var(--text-muted);
+  text-decoration: line-through;
+}
+
+.product-card__btn {
+  width: 100%;
+}
+
+/* ---------- Блок services ---------- */
+
+.services {
+  padding: 40px 20px;
+}
+
+.services__title {
+  max-width: 1100px;
+  margin: 0 auto 24px;
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 900;
+}
+
+.services__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service-card {
+  flex: 1 1 240px;
+  padding: 24px;
+  background: var(--text-main);
+  color: #ffffff;
+  border-radius: var(--radius);
+}
+
+.service-card__title {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.service-card__text {
+  margin: 0 0 14px;
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+.service-card__price {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+/* ---------- Блок footer ---------- */
+
+.footer {
+  padding: 24px 20px;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-soft);
+}
+
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer__copy {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer__link {
+  font-size: 14px;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  color: var(--primary-dark);
+}
