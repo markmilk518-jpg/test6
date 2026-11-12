@@ -99,17 +99,24 @@
         </article>
 
         <article class="product-card">
-          <div class="product-card__image-box">
-            <img src="https://avatars.mds.yandex.net/get-mpic/18674845/2a0000019b8e3914c08dc81cfef313e5c5e2/orig" alt="Лежанка «Облачко» для кошек" class="product-card__image">
-          </div>
-          <span class="product-card__category">Домики</span>
-          <h3 class="product-card__title">Лежанка «Облачко»</h3>
-          <div class="product-card__pricing">
-            <span class="product-card__price-new">1 490 ₽</span>
-          </div>
-          <button type="button" class="button button_primary product-card__btn">В корзину</button>
-        </article>
+  <!-- Бейдж остаётся сверху карточки -->
+  <span class="product-card__badge">-30%</span>
 
+  <!-- ТОЛЬКО картинка: квадрат -->
+  <div class="product-card__image-box">
+    <img src="https://avatars.mds.yandex.net/get-mpic/18674845/2a0000019b8e3914c08dc81cfef313e5c5e2/orig" alt="Лежанка «Облачко»" class="product-card__image">
+  </div>
+
+  <!-- Контент: категория, заголовок, цена, кнопка (идут ПОСЛЕ картинки) -->
+  <span class="product-card__category">Домики</span>
+  <h3 class="product-card__title">Лежанка «Облачко»</h3>
+  
+  <div class="product-card__pricing">
+    <span class="product-card__price-new">1 490 ₽</span>
+  </div>
+  
+  <button type="button" class="button button_primary product-card__btn">В корзину</button>
+</article>
       </div>
     </section>
 
